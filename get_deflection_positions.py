@@ -81,7 +81,7 @@ for t in gost_times:
 
     # Calculate the position of the source including the microlenising deflection
     deflected_ras = np.append(deflected_ras,source_ra+deflectionVector[0]/np.cos(np.deg2rad(ref_dec)))
-    deflected_decs = np.append(deflected_decs,source_dec+deflectionVector[0])
+    deflected_decs = np.append(deflected_decs,source_dec+deflectionVector[1])
 
     #store the un deflections position and lens source separation.
     ras = np.append(ras,source_ra)
