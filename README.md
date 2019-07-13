@@ -17,3 +17,7 @@ Simulations of Gaia Microlensing Events
 ## Installation
 
 Before being able to run the code you will need to install the following packages.
+
+* Astropy `pip install astropy`
+* Astroquery `pip install astroquery`
+* Pandas `pip install panadas`
