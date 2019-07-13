@@ -28,10 +28,10 @@ def plot_source_trajectories(output_dir: str,ras: ndarray,decs: ndarray,
     :returns : None, saves the plot in output_dir.
     """
 
-    rel_ras = (ras - ra_ref) * DEG_TO_MAS
+    rel_ras = (ras - ra_ref) * DEG_TO_MAS * abs(np.cos(np.deg2rad(dec_ref)))
     rel_decs = (decs - dec_ref) *DEG_TO_MAS
 
-    rel_ras_d = (deflected_ras - ra_ref) * DEG_TO_MAS
+    rel_ras_d = (deflected_ras - ra_ref) * DEG_TO_MAS * abs(np.cos(np.deg2rad(dec_ref)))
     rel_decs_d = (deflected_decs - dec_ref) * DEG_TO_MAS
 
     plt.clf()

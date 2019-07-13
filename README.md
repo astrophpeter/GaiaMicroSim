@@ -31,7 +31,7 @@ To generate the output for a single microlensing event where the background sour
 
 For example for the candidate event where the background source has id = 5254061535052907008 and the lens has id = 5254061535097566848, running 
 
-```python get_deflection_position.py 5254061535052907008 5254061535097566848``` 
+```python get_deflection_positions.py 5254061535052907008 5254061535097566848``` 
 
 will populate the 
 
@@ -44,7 +44,7 @@ So, after installing the required packages, reproducing the simulation results f
 ```
 git clone https://github.com/astrophpeter/GaiaMicroSim.git
 cd GaiaMicroSim
-python get_deflection_position.py 4687511780573305984 4687511776265158400
-python get_deflection_position.py 5254061535052907008 5254061535097566848
-python get_deflection_position.py 314922601464808064 314922605759778048
+python get_deflection_positions.py 4687511780573305984 4687511776265158400
+python get_deflection_positions.py 5254061535052907008 5254061535097566848
+python get_deflection_positions.py 314922601464808064 314922605759778048
 ``` 

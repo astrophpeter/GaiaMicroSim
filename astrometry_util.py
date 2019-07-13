@@ -81,7 +81,7 @@ def getSep(ra_1,dec_1,ra_2,dec_2):
     dec_avg = 0.5*(dec_1+dec_2)   
 
     delta_dec = (dec_2-dec_1)*DEG_TO_MAS
-    delta_ra = (ra_2-ra_1)*DEG_TO_MAS*np.cos(np.deg2rad(dec_avg))
+    delta_ra = (ra_2-ra_1)*DEG_TO_MAS*abs(np.cos(np.deg2rad(dec_avg)))
 
     return np.hypot(delta_dec,delta_ra)
 
@@ -101,7 +101,7 @@ def getAngle(ra_1: float,dec_1: float,ra_2: float ,dec_2: float) -> float:
 
     dec_avg = 0.5*(dec_1+dec_2)
     delta_dec = (dec_2-dec_1)*DEG_TO_MAS
-    delta_ra = (ra_2-ra_1)*DEG_TO_MAS*np.cos(np.deg2rad(dec_avg))
+    delta_ra = (ra_2-ra_1)*DEG_TO_MAS*abs(np.cos(np.deg2rad(dec_avg)))
 
     return np.arctan2(delta_dec,delta_ra)
 
