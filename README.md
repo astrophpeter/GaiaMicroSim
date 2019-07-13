@@ -25,4 +25,4 @@ Before being able to run the code you will need to install the following package
 
 ## Example Usage
 
-To generate the output for a single microlensing event where the background source has Gaia DR2 source id = source_id, and the lens has a Gaia DR2 source id = lens_id. You run `get_deflection_position.py source_id lens_id`.
+To generate the output for a single microlensing event where the background source has Gaia DR2 source id = source_id, and the lens has a Gaia DR2 source id = lens_id. You run `python get_deflection_position.py source_id lens_id`.
