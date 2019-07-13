@@ -21,3 +21,8 @@ Before being able to run the code you will need to install the following package
 * Astropy `pip install astropy`
 * Astroquery `pip install astroquery`
 * Pandas `pip install panadas`
+
+
+## Example Usage
+
+To generate the output for a single microlensing event where the background source has Gaia DR2 source id = source_id, and the lens has a Gaia DR2 source id = lens_id. You run `get_deflection_position.py source_id lens_id`.
