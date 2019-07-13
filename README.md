@@ -38,3 +38,13 @@ will populate the
 ```outputs/5254061535052907008_5254061535097566848/``` 
 
 directory with the simulation results.
+
+So, after installing the required packages, reproducing the simulation results for the three candidate events should be as simple as:
+
+```
+git clone https://github.com/astrophpeter/GaiaMicroSim.git
+cd GaiaMicroSim
+python get_deflection_position.py 4687511780573305984 4687511776265158400
+python get_deflection_position.py 5254061535052907008 5254061535097566848
+python get_deflection_position.py 314922601464808064 314922605759778048
+``` 
