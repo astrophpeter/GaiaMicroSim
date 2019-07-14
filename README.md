@@ -12,11 +12,11 @@ Simulations of Gaia Microlensing Events
 * `outputs/<Gaia DR2 background source id>_<Gaia DR2 lens id>/lensed_positions.csv` File containing times the background source was seen by Gaia [Juluian years], Right ascension [Degrees], Declination [Degrees] of the background source inlcuding the microlensing deflection.
 * `outputs/<Gaia DR2 background source id>_<Gaia DR2 lens id>/unlensed_positions.csv` File containing times the background source was seen by Gaia [Juluian years], Right ascension [Degrees], Declination [Degrees] of the background source **NOT** inlcuding the microlensing deflection.
 * `outputs/<Gaia DR2 background source id>_<Gaia DR2 lens id>/separation.png` A plot of the true lens source separation at the times Gaia observed the event.
-* `outputs/<Gaia DR2 background source id>_<Gaia DR2 lens id>/trajectorys.png` A plot of the lensed and unlensed source trajectories at the times Gaia observed the event. Zommed in to 500 mas square around the event maximum.
+* `outputs/<Gaia DR2 background source id>_<Gaia DR2 lens id>/trajectorys.png` A plot of the lensed and unlensed source trajectories at the times Gaia observed the event. Zommed in to 50 mas square around the event maximum.
 
 ## Installation
 
-Before being able to run the code you will need to install the following packages.
+Before being able to run the code you will need Python3 and to install the following packages.
 
 * Astropy `pip install astropy`
 * Astroquery `pip install astroquery`
