@@ -1,0 +1,193 @@
+\title{Notes on the partially resoleved astrometric microlensing shift with parallax}
+\author{
+        Peter McGill \\
+                Institute of Astronony\\
+                University of Cambridge\\
+                pm625@ast.cam.ac.uk
+}
+\date{\today}
+
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{natbib}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+
+The astrometric deflection model for a source being graviataionally lensed in a partially 
+resolved system is presented. Two regimes of this model are considered. Firstly,
+the regime where parallax effects are not present in the deflection signal is presented.
+Then the regime where parallax can be detected in the deflection signal is presented.
+We conclude that if a parallax signal is detected in the deflection the lens mass can be
+directly inferred from the astrometric timeseries of the source. In the case where the
+parallax singal is not detected then auxillary astrometric information about the lens
+is needed to contrain the lens mass.
+
+\end{abstract}
+
+\section{Preliminaries}
+In this note vectors are denoted $\vec{a}$, the magnitude of a vector is denoted $|a|$, 
+the dot and cross products between two vectors are denoted $\vec{a}\cdot\vec{b}$ and 
+$\vec{a}\times\vec{b}$ respectively.
+
+
+Let a background source (the source) be located at distance $D_{S}$ from an observer, 
+and a lens with mass $M$ be at distance $D_{L}$, where $0<D_{L}<D_{S}$. Let 
+$\vec{\psi}_{L}$ and $\vec{\psi}_{S}$ be the angular positions of the lens and source 
+respectively. We the define the dimensionless vector
+%
+\begin{equation}
+\vec{u}(t) = \frac{\vec{\psi}(t)}{\theta_{E}} = 
+          \frac{\vec{\psi}_{L}(t)-\vec{\psi}_{S}(t)}{\theta_{E}}, 
+          \quad \theta_{E} = \sqrt{\frac{4GM}{c^{2}}\frac{D_{L}-D_{S}}{D_{S}D_{L}}}.
+\end{equation}
+%
+In the case where the lens and major source image can be resolved for the duration 
+of the microlensing event. The apperant deflection of the source is given by the 
+position of the major image by e.g \cite{Bramich18} as,
+%
+\begin{equation}
+\vec{\delta}_{+}(t) = \frac{1}{2}\left(\sqrt{|\vec{u}(t)|^{2}+4}-|\vec{u}(t)|\right)
+                   \theta_{E}\frac{\vec{u}(t)}{|\vec{u}(t)|}.
+\label{eq:shift}
+\end{equation}
+%
+$\vec{u}(t)$ is usually alteast parameterised by the standard microlensing paramters 
+$(u_{0},t_{0},t_{E})$ which we will define here, the specifics of the 
+paramterisation will be addressed in the next section. $u_{0}$ is the minimum 
+normalised lens source separation in the case of linear lens-source relavtive
+motion. $t_{0}$ is the time of miminum lens-source separation again in the case 
+of linear lens-source relative motion. $t_{E}$ is the Einstein time and is defined as the 
+relative lens-source proper motion divided by the the Einstien raduis 
+$|\mu_{\text{rel}}/\theta_{E}|$. In the case of linear lens-source relative motion this
+sets the timescale of the event. 
+%
+\section{Parameterization of $\vec{u}(t)$}
+%
+Equation (2) shows that the astrometric microlenisng signal is completely
+defined by the direction and magnitude of $\vec{u}(t)$. In this section we will outline
+its parameterization in two regimes. Firstly, in the regime where the motion of the observer
+is negilable, and then in the general case where the observer motion is included. 
+In this section we will work with all vectors with the local unit north ($\hat{n}$) 
+and east ($\hat{e}$) basis. Specifically we will use the notation 
+$\vec{a} = (a_{n},a_{e}) = a_{n}\hat{n} + a_{e}\hat{e}$. In the following sections
+I will be following the notation and conventions of \cite{Gould04}.
+
+\subsection{Stationary observer}
+
+Let the relative lens-source vector be $\vec{u}(t) = -(\tau(t),\beta(t))$. In the case
+of linear lens-source motion and no parallax effects we have,
+%
+\begin{equation}
+\tau(t) = \frac{t-t_{0}}{t_{E}}, \quad \beta(t) = \beta
+        = u_{0}.
+\end{equation}
+%
+This leads to $\vec{u}(t) \to \vec{u}(t;u_{0},t_{0},t_{E})$ and therefore
+by equation (2) $\vec{\delta}_{+}(t) \to \vec{\delta}_{+}(t;u_{0},t_{0},t_{E},\theta_{E})$.
+
+\subsection{Moving observer}
+
+To inlcude the effect of a moving observer we introduce a small perturbation to the linear
+len-source motion model. Specifically, we let the relative lens-source vector be 
+$\vec{u}(t) = -(\tau(t),\beta(t))$, and with a small perturbation equation (3) becomes,
+%
+\begin{equation}
+\tau(t) = \frac{t-t_{0}}{t_{E}}+\delta\tau(t), \quad \beta(t) =  u_{0}+\delta\beta(t).
+\end{equation}
+%
+To find the forms of $\delta\tau(t)$ and $\delta\beta(t)$ let us consider the following.
+Let $\vec{s}(t)$ be the observer-sun vector in units of AU and in the heliocentric frame. 
+Let $t_{p}$ be some fixed reference (ideally close to the event maximum $t_{0}$) as seen 
+by the observer. We evaluate the derivate of $\vec{s}(t)$ at this time,
+%
+\begin{equation}
+\vec{v}_{p} =\left. \frac{d\vec{s}(t)}{dt}\right|_{t=t_{p}}.
+\end{equation}
+%
+The offset of the sun is then,
+%
+\begin{equation}
+\Delta\vec{s}(t) = \vec{s}(t)-(t-t_{p})\vec{v_{p}}-\vec{s}(t_{p})
+\end{equation}
+%
+Consider now observations towards the event at some time with given
+celestial coordinates,
+%
+\begin{equation}
+(s_{n}(t),s_{e}(t)) = (\Delta\vec{s}(t)\cdot\hat{n},\Delta\vec{s}(t)\cdot\hat{e})
+\end{equation}
+%
+We can now write the form of $\delta\tau(t)$ and $\delta\beta(t))$ as,
+%
+\begin{equation}
+(\delta\tau(t),\delta\beta(t)) = |\vec{\pi}_{E}|\Delta\vec{s}(t) = 
+(\vec{\pi}_{E}\cdot\Delta\vec{s}(t),\vec{\pi}_{E}\times\Delta\vec{s}(t))
+\end{equation}
+%
+Or more explicitly,
+%
+\begin{equation}
+(\delta\tau(t),\delta\beta(t)) =  (s_{n}(t)\pi_{EN}+s_{e}(t)\pi_{EE},
+                                  -s_{n}(t)\pi_{E,E}+s_{e}(t)\pi_{EN})
+\end{equation}
+%
+Where here we have introduced the microlensing parallax vector 
+$\vec{\pi}_{E} = (\pi_{EN},\pi_{EE})$. It is noted that,
+%
+\begin{equation}
+|\vec{\pi}_{E}| = \frac{\pi_{\text{rel}}}{\theta_{E}}
+\end{equation}.
+%
+Here, $\pi_{\text{rel}}$ is the relative lens-source parallax.
+This leads to $\vec{u}(t) \to \vec{u}(t;u_{0},t_{0},t_{E},\pi_{EN},\pi_{EE})$ and therefore
+by equation (2) 
+$\vec{\delta}_{+}(t) \to \vec{\delta}_{+}(t;u_{0},t_{0},t_{E},\pi_{EN},\pi_{EE},\theta_{E})$.
+Note that if you take $\pi_{\text{rel}}=(1/D_{S})-(1/D_{L})$, then the mass of lens can be directly
+obtained through $\theta_{E}$ and $|\vec{\pi_{E}}|$.
+
+\section{Deflection model of a lensed source}
+
+Now we write the full astrometric model for a source with a microlensing deflection term both in regimes.
+In both cases we assume the source has some initial reference position, 
+$\vec{\xi}_{\text{ref}}=(\xi_{\text{ref,N}},\xi_{\text{ref,E}})$ at reference time $t_{\text{ref}}$, 
+and proper motion $\vec{\mu}=(\mu_{N},\mu_{E})$,and the parallax vector of the source is $\vec{\Pi}_{S}$, with the
+source parallax amplitude as $\pi_{S}$. We can write the apparent position of the 
+source at some time t for the stationary observer model as,
+%
+\begin{equation}
+\begin{aligned}
+&\vec{\xi}(t;\xi_{N},\xi_{E},\mu_{N},\mu_{E},t_{0},t_{E},u_{0},\pi_{S},\theta_{E}) = \\
+&+\vec{\xi}_{\text{ref}} \\
+&+\vec{\mu}(t-t_{\text{ref}}) \\
+&+\vec{\Pi}_{S}(t;\pi_{s})\\
+&+\vec{\delta}_{+}(t;t_{0},t_{E},u_{0},\theta_{E}).
+\end{aligned}
+\end{equation}
+%
+For the moving observer regime we can write the apparent position as, 
+\begin{equation}
+\begin{aligned}
+&\vec{\xi}(t;\xi_{N},\xi_{E},\mu_{N},\mu_{E},t_{0},t_{E},u_{0},\pi_{EN},\pi_{EE},\pi_{S},\theta_{E}) = \\
+&+\vec{\xi}_{\text{ref}} \\
+&+\vec{\mu}(t-t_{\text{ref}}) \\
+&+\vec{\Pi}_{S}(t;\pi_{s})\\
+&+\vec{\delta}_{+}(t;t_{0},t_{E},u_{0},\pi_{EN},\pi_{EE},\theta_{E}).
+\end{aligned}
+\end{equation}
+
+Note that if a parallax signal is detected in the deflection (we are able to fit the moving observer model) 
+then the mass of the lens can be directly inferred from the astrometric timeseries. However if we dont observe
+a parallax signal in the deflection (we are only able to fit the stationary observer model) then only $\theta_{E}$
+can be infered from the astrometric timeseries. Determination of the lens mass would require auxillary informaiton
+about the lens (the lens parallax) which could be obtained from Gaia Data Release 2 for example.
+
+
+\bibliographystyle{plainnat} 
+\bibliography{microlensingMaths}
+
+\end{document}
