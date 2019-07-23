@@ -71,15 +71,16 @@ sets the timescale of the event.
 Equation (2) shows that the astrometric microlensing signal is completely
 defined by the direction and magnitude of $\vec{u}(t)$. In this section, we will outline
 its parameterisation in two regimes. Firstly, in the regime where the motion of the observer
-is negligible, then in the general case where the observer motion is included. 
-In this section we will work with all vectors with the local unit north ($\hat{n}$) 
-and east ($\hat{e}$) basis. Specifically we will use the notation 
-$\vec{a} = (a_{n},a_{e}) = a_{n}\hat{n} + a_{e}\hat{e}$. In the following sections
-I will be following the notation and conventions of \cite{Gould04}.
+is negligible, then in the general case where the observer motion is included. In the 
+following sections I will be following the notation and conventions of \cite{Gould04}.
+Figure 2. in \cite{Gould04} is very useful to understand what is going on in the 
+following sections.
 
 \subsection{Stationary observer}
 
-Let the relative lens-source vector be $\vec{u}(t) = -(\tau(t),\beta(t))$. In the case
+Let the relative lens-source vector be $\vec{u}(t) = -\tau(t)\hat{\parallel}-\beta(t)\hat{\perp}$.
+Here, $\hat{\parallel}$ and $\hat{\perp}$ are the unit vectors parallel and perpendicular to
+the relative lens-source proper motion vector.  In the case
 of linear lens-source motion and no parallax effects we have,
 %
 \begin{equation}
@@ -87,14 +88,26 @@ of linear lens-source motion and no parallax effects we have,
         = u_{0}.
 \end{equation}
 %
-This leads to $\vec{u}(t) \to \vec{u}(t;u_{0},t_{0},t_{E})$ and therefore
-by equation (2) $\vec{\delta}_{+}(t) \to \vec{\delta}_{+}(t;u_{0},t_{0},t_{E},\theta_{E})$.
+This leads to $\vec{u}(t) \to \vec{u}(t;u_{0},t_{0},t_{E})$. As we are modelling the source
+trajectory only and we won't know the direction of the lens-source proper motion vector 
+we introduce another free parameter $\phi$, which defines the rotational angle to 
+the local unit north and east basis ($\hat{n},\hat{e}$). The expression in the 
+($\hat{n},\hat{e}$) basis is then,
+%
+\begin{equation}
+\vec{u}(t) = -(\cos\phi+\sin\phi)\tau(t)\hat{e} - (\cos\phi-\sin\phi)\beta\hat{e}
+\end{equation}
+
+This leads to 
+$\vec{u}(t) \to \vec{u}(t;u_{0},t_{0},t_{E},\phi)$, and therefore
+by equation (2) $\vec{\delta}_{+}(t) \to \vec{\delta}_{+}(t;u_{0},t_{0},t_{E},\theta_{E},\phi)$.
 
 \subsection{Moving observer}
 
 To include the effect of a moving observer we introduce a small perturbation to the linear
 lens-source motion model. Specifically, we let the relative lens-source vector be 
-$\vec{u}(t) = -(\tau(t),\beta(t))$, and with a small perturbation equation (3) becomes,
+$\vec{u}(t) = -\tau(t)\hat{\parallel},-\beta(t)\hat{\perp}$, and with a small perturbation 
+equation (3) becomes,
 %
 \begin{equation}
 \tau(t) = \frac{t-t_{0}}{t_{E}}+\delta\tau(t), \quad \beta(t) =  u_{0}+\delta\beta(t).
@@ -143,9 +156,16 @@ $\vec{\pi}_{E} = (\pi_{EN},\pi_{EE})$. It is noted that,
 |\vec{\pi}_{E}| = \frac{\pi_{\text{rel}}}{\theta_{E}}.
 \end{equation}
 %
-Here, $\pi_{\text{rel}}$ is the relative lens-source parallax. This leads to 
-$\vec{u}(t) \to \vec{u}(t;u_{0},t_{0},t_{E},\pi_{EN},\pi_{EE})$ and therefore
-by equation (2) $\vec{\delta}_{+}(t) \to \vec{\delta}_{+}(t;u_{0},t_{0},t_{E},\pi_{EN},\pi_{EE},\theta_{E})$.
+Here, $\pi_{\text{rel}}$ is the relative lens-source parallax.
+Writing $\vec{u}(t)$ in the ($\hat{e},\hat{n}$) basis by the same
+reason in the above section we have,
+%
+\begin{equation}
+\vec{u}(t) = -(\cos\phi+\sin\phi)\tau(t)\hat{e} - (\cos\phi-\sin\phi)\beta(t)\hat{e}
+\end{equation}
+%
+This leads to $\vec{u}(t) \to \vec{u}(t;u_{0},t_{0},t_{E},\pi_{EN},\pi_{EE},\phi)$ and therefore
+by equation (2) $\vec{\delta}_{+}(t) \to \vec{\delta}_{+}(t;u_{0},t_{0},t_{E},\pi_{EN},\pi_{EE},\theta_{E},\phi)$.
 Note that if you take $\pi_{\text{rel}}=(1/D_{S})-(1/D_{L})$, then the mass of the lens can be directly
 obtained through $\theta_{E}$ and $|\vec{\pi_{E}}|$.
 
@@ -153,29 +173,29 @@ obtained through $\theta_{E}$ and $|\vec{\pi_{E}}|$.
 
 Now we write the full astrometric model for a source with a microlensing deflection term in both regimes.
 In both cases we assume the source has some initial reference position, 
-$\vec{\xi}_{\text{ref}}=(\xi_{\text{ref,N}},\xi_{\text{ref,E}})$ at reference time $t_{\text{ref}}$, 
-and proper motion $\vec{\mu}=(\mu_{N},\mu_{E})$, and the parallax vector of the source is $\vec{\Pi}_{S}$, with the
+$\vec{\xi}_{\text{ref}}=\xi_{\text{ref,N}}\hat{n}+\xi_{\text{ref,E}}\hat{e}$ at reference time $t_{\text{ref}}$, 
+and proper motion $\vec{\mu}=\mu_{N}\hat{n}+\mu_{E}\hat{e}$, and the parallax vector of the source is $\vec{\Pi}_{S}$, with the
 source parallax amplitude as $\pi_{S}$. We can write the apparent position of the 
 source at some time t for the stationary observer model as,
 %
 \begin{equation}
 \begin{aligned}
-&\vec{\xi}(t;\xi_{N},\xi_{E},\mu_{N},\mu_{E},t_{0},t_{E},u_{0},\pi_{S},\theta_{E}) = \\
+&\vec{\xi}(t;\xi_{N},\xi_{E},\mu_{N},\mu_{E},t_{0},t_{E},u_{0},\pi_{S},\theta_{E},\phi) = \\
 &+\vec{\xi}_{\text{ref}} \\
 &+\vec{\mu}(t-t_{\text{ref}}) \\
 &+\vec{\Pi}_{S}(t;\pi_{s})\\
-&+\vec{\delta}_{+}(t;t_{0},t_{E},u_{0},\theta_{E}).
+&+\vec{\delta}_{+}(t;t_{0},t_{E},u_{0},\theta_{E},\phi).
 \end{aligned}
 \end{equation}
 %
 For the moving observer regime we can write the apparent position as, 
 \begin{equation}
 \begin{aligned}
-&\vec{\xi}(t;\xi_{N},\xi_{E},\mu_{N},\mu_{E},t_{0},t_{E},u_{0},\pi_{EN},\pi_{EE},\pi_{S},\theta_{E}) = \\
+&\vec{\xi}(t;\xi_{N},\xi_{E},\mu_{N},\mu_{E},t_{0},t_{E},u_{0},\pi_{EN},\pi_{EE},\pi_{S},\theta_{E},\phi) = \\
 &+\vec{\xi}_{\text{ref}} \\
 &+\vec{\mu}(t-t_{\text{ref}}) \\
 &+\vec{\Pi}_{S}(t;\pi_{s})\\
-&+\vec{\delta}_{+}(t;t_{0},t_{E},u_{0},\pi_{EN},\pi_{EE},\theta_{E}).
+&+\vec{\delta}_{+}(t;t_{0},t_{E},u_{0},\pi_{EN},\pi_{EE},\theta_{E},\phi).
 \end{aligned}
 \end{equation}
 
